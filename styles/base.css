@@ -1,0 +1,35 @@
+
+
+:root {
+  --logo-font-family: 'Urbanist', sans-serif;
+  --header-font-family: 'Share Tech Mono', monospace;
+  --regular-font-family: 'Lato', sans-serif;
+}
+
+* {
+
+}
+
+html {
+  font-family: var(--regular-font-family);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+h1, h2 {
+  font-family: var(--header-font-family);
+}
+
+.title {
+  font-family: var(--logo-font-family);
+  font-size: 2.5rem;
+}
+
+.logo {
+  color: #40bfbf;
+}
