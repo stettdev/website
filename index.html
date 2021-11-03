@@ -10,30 +10,106 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;700&family=Share+Tech+Mono&family=Urbanist:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/base.css">
 
   <script src="https://kit.fontawesome.com/5498e3226a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>Home</a></li>
-        <li><a>Home</a></li>
-      </ul>
-    </nav>
-    <h1 class="title"><span class="fas fa-terminal logo" aria-hidden="true"></span>&nbsp;STETT</h1>
-    <p></p>
-    <h2>Curious Software Developer</h2>
-  </header>
-  
-  <main>
 
+  <div id="to-top" class="to-top" onclick="toTopButton();"><p class="fas fa-angle-up"></p><br />to top</div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <h1 class="branding unselectable"><span>STE</span>TT</h1>
+    <nav class="menu">
+      <a class="unselectable" href="#about">about</a>
+      <a class="unselectable" href="#portfolio">portfolio</a>
+      <a class="unselectable" href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="home page">
+      
+      <h2>
+        <a href="#code-portfolio" class="code-link">code</a>
+        <span class="unselectable">+</span>
+        <a href="#music-portfolio" class="music-link">music</a>       
+
+        <!-- INFO BOX -->
+        <div class="music-info">
+          <p>self-taught music producer</p>
+        </div>
+
+        <div class="code-info">
+          <p>software developer with over 3 years of experience</p>
+        </div>
+      </h2> 
+
+      <!-- CTA -->
+      <a href="#contact" class="cta">contact me</a>
+
+      <a href="#about" class="next"><span class="fas fa-angle-down"></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about page">
+      <h3>about</h3>
+      <a href="#portfolio" class="next"><span class="fas fa-angle-down"></span></a>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio page">
+        <h3>I am both a developer and a producer.</h3>
+        Choose a specific branch of my experience
+
+        <nav class="portfolio-tabs">
+          <a href="#code-portfolio">code</a>
+          <a href="#music-portfolio">music</a>
+        </nav>
+
+      <!-- CODING EXPERIENCE -->
+      <div id="code-portfolio" class="portfolio-tab">
+        <h3>code</h3>
+      </div>
+      
+      <!-- MUSIC ALBUMS -->
+      <div id="music-portfolio" class="portfolio-tab">
+        <h3>music</h3>
+      </div>
+
+      <a href="#contact" class="next"><span class="fas fa-angle-down"></span></a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact page">
+      <h3>contact</h3>
+    </section>
   </main>
   <footer>
-
+    Copyright 2021 &copy; STETT
   </footer>
+  <script type="text/javascript">
+    //Get the button:
+    toTopButton = document.getElementById("to-top");
+
+    window.onscroll = () => buttonDisplayCheck();
+
+    buttonDisplayCheck = () => {
+      if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
+        toTopButton.style.display = "block";
+      } else {
+        toTopButton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function toTopButton() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,367 @@
+/* Variables */
+
+:root {
+  --ff-regular: 'Lato', sans-serif;
+
+  --fw-branding: 800;
+  --fw-header: 900;
+  --fw-regular: 400;
+
+  --fs-xxl: 8rem;
+  --fs-xl: 5rem;
+  --fs-800: 4rem;
+  --fs-600: 1.5rem;
+  --fs-400: 1rem;
+
+  --c-white: #FCF7F8;
+  --c-black: #000c10;
+  --c-darkblue: #00182c;
+  --c-purple: #171738;
+  --c-gray: #313638;
+  --c-cyan: #297373;
+  --c-teal: #40BFBF;
+  --c-cream: #F3E9D2;
+  --c-orange: #E6AF2E;
+
+  --w-content: min(100vw, 82rem);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-xxl: 6rem;
+    --fs-xl: 4rem;
+    --fs-800: 2rem;
+    --fs-600: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* General Setup */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  width: 100vw;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: hidden;
+
+  font-family: var(--ff-regular);
+
+  background: var(--c-darkblue);
+  color: var(--c-cyan);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  
+  font-family: var(--ff-header);
+  font-weight: var(--fw-header);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  transition: color 400ms;
+}
+
+a:hover {
+  color: var(--c-white);
+}
+
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
+}
+
+/* Header & Branding */
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--w-content);
+  padding: .5rem 2.5rem;
+  z-index: 1;
+}
+
+.branding {
+  font-family: var(--ff-regular);
+  font-weight: var(--fw-branding);
+  font-size: var(--fs-xxl); 
+  letter-spacing: -.25em;
+  color: var(--c-teal);
+}
+
+.branding span {
+  display: none;
+  letter-spacing: -.125em;
+}
+
+@media (min-width: 800px) {
+  .branding span {
+    display: inline;
+  }
+}
+ /* Navigation  */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: relative;
+}
+
+.menu::after {
+  position: absolute;
+  content: '';
+  background: var(--c-cyan);
+  top: -.25rem;
+  left: calc(100% + 0.75rem);
+  right: -1rem;
+  bottom: -.25rem;
+}
+
+header .menu a {
+  font-size: var(--fs-600);
+  color: var(--c-teal);
+  text-decoration: none;
+}
+
+header .menu a:hover {
+  color: var(--c-white);
+}
+
+.next {
+  position: absolute;
+  font-size: var(--fs-800);
+  bottom: 2rem;
+
+  color: var(--c-white);
+}
+
+.to-top {
+  position: fixed;
+  display: none;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 5;
+
+  font-size: var(--fs-600);
+  text-align: center;
+ 
+  color: var(--c-white);
+  filter: drop-shadow(0 .5rem 1rem var(--c-black));
+
+  cursor: pointer;
+}
+
+/* Content */
+
+main {
+  width: var(--w-content);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Home Page */
+
+.home {
+  padding-top: 6rem;
+  background: linear-gradient(to bottom, var(--c-black), transparent 35%);
+}
+
+h2 {
+  text-align: center;
+  font-size: var(--fs-xl);
+}
+
+h2 > span {
+  display: block;
+  color: var(--c-teal);
+  font-size: var(--fs-800);
+  margin: 0;
+  padding: 0;
+}
+
+h2 > a:hover {
+  color: var(--c-teal);
+}
+
+.music-info,
+.code-info {
+  left:0;
+  right:0;
+  display: block;
+  color: var(--c-white);
+  
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+}
+
+@media (min-width: 800px) {
+  h2 {
+    font-size: var(--fs-xxl);
+  }
+  h2 > span {
+    display: inline;
+    font-size: var(--fs-xl);
+  }
+
+  .code-link::after,
+  .music-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(transparent, transparent);
+    z-index: -1;  
+  }
+
+  .music-link:hover {
+    color: var(--c-orange);
+  }
+
+  .code-link::after,
+  .music-link::after {
+    opacity: 0;
+    transition: 400ms;
+    background: radial-gradient(var(--c-purple), var(--c-black));
+  }
+
+  .code-link:hover::after,
+  .music-link:hover::after {
+    opacity: 1;
+  }
+
+  .music-link:hover ~ .music-info, 
+  .code-link:hover  ~ .code-info {
+    display: block;
+    color: var(--c-white);
+    transition: color 250ms;
+  }
+
+  .music-info,
+  .code-info {
+    position: absolute;
+    font-size: var(--fs-600);
+    color: transparent;
+    transition: color 50ms;
+  }
+}
+
+.cta {
+  margin-top: 1rem;
+  background: transparent;
+  border: solid .25rem var(--c-teal);
+  font-family: var(--ff-regular);
+  font-weight: var(--fw-header);
+  color: var(--c-white);
+  font-size: var(--fs-400);
+  padding: .75rem 1.5rem;
+  position: relative;
+  border-radius: .5rem;
+}
+
+@media (min-width: 800px) {
+  .cta {
+    font-size: var(--fs-600); 
+    margin-top: 5rem;
+    transition: 600ms ease-in-out;
+  }
+
+  .cta:hover {
+    color: var(--c-darkblue);
+    background: var(--c-teal); 
+    cursor: pointer;
+    box-shadow: inset 0 0 0 3rem var(--c-teal);
+  }
+}
+
+/* About Page */
+
+
+.about {
+  background-color: var(--c-teal);
+  color: var(--c-black);
+}
+
+/* Portfolio Page */
+
+.portfolio {
+  background: linear-gradient(to bottom, var(--c-black) , var(--c-purple));
+  color: var(--c-cyan);
+  justify-content: start;
+}
+
+.portfolio > h3 {
+  padding-top: 1.25rem;
+}
+
+.portfolio-tabs {
+  position: absolute;
+  top: 4rem;
+  display: flex;
+  font-size: var(--fs-800);
+  font-weight: var(--fw-header);
+}
+
+.portfolio-tabs > a {
+  display: inline-block;
+  min-width: 8rem;
+  text-align: center;
+  background: var(--c-gray);
+}
+
+.portfolio-tab {
+  position: absolute;
+  padding-top: 8rem;
+  text-align: center;
+  order: 1;
+  display: none;
+}
+
+.portfolio-tab:target {
+  display: block;
+}
+
+/* Contact Page */
+
+.contact {
+  background: var(--c-black);
+  color: var(--c-white);
+}
+
+/* Footer */
+
+footer {
+  width: 100vw;
+  text-align: center;
+  background: var(--c-black);
+  padding-block: 2rem;
+}
