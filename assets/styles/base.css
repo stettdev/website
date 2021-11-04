@@ -11,6 +11,7 @@
   --fs-xl: 5rem;
   --fs-800: 4rem;
   --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
   --fs-400: 1rem;
 
   --c-white: #FCF7F8;
@@ -24,15 +25,18 @@
   --c-orange: #E6AF2E;
 
   --w-content: min(100vw, 82rem);
+
+  --sw-min: 1081px;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 1081px) {
   :root {
     --fs-xxl: 6rem;
-    --fs-xl: 4rem;
-    --fs-800: 2rem;
-    --fs-600: 1.25rem;
-    --fs-400: 1rem;
+    --fs-xl: 6rem;
+    --fs-800: 4rem;
+    --fs-600: 2.5rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.25rem;
   }
 }
 
@@ -108,12 +112,13 @@ header {
   letter-spacing: -.125em;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .branding span {
     display: inline;
   }
 }
- /* Navigation  */
+
+/* Navigation  */
 
 .menu {
   display: flex;
@@ -142,28 +147,40 @@ header .menu a:hover {
   color: var(--c-white);
 }
 
-.next {
-  position: absolute;
-  font-size: var(--fs-800);
-  bottom: 2rem;
-
-  color: var(--c-white);
-}
-
 .to-top {
-  position: fixed;
   display: none;
-  bottom: 5rem;
-  right: 5rem;
-  z-index: 5;
+  position: fixed;  
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
 
-  font-size: var(--fs-600);
-  text-align: center;
+  z-index: 5;
+  top: .75rem;
+  padding: .75rem;
+  border-radius: .5rem;
+
+  font-size: var(--fs-400);
  
   color: var(--c-white);
-  filter: drop-shadow(0 .5rem 1rem var(--c-black));
-
+  background-color: var(--c-black);
   cursor: pointer;
+  opacity: .4;
+
+  transition: 400ms;
+}
+
+.to-top:hover {
+  background-color: var(--c-gray);
+}
+
+@media screen and (min-width: 1081px) {
+  .to-top {
+    top: 3rem;
+    right: 16rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    opacity: 0.75;
+  }
 }
 
 /* Content */
@@ -191,12 +208,13 @@ main {
 
 .home {
   padding-top: 6rem;
-  background: linear-gradient(to bottom, var(--c-black), transparent 35%);
+  background: radial-gradient(var(--c-purple), var(--c-black));
 }
 
 h2 {
   text-align: center;
   font-size: var(--fs-xl);
+  color: var(--c-teal);
 }
 
 h2 > span {
@@ -207,14 +225,18 @@ h2 > span {
   padding: 0;
 }
 
-h2 > a:hover {
+.code-link {
   color: var(--c-teal);
+}
+
+.music-link {
+  color: var(--c-orange);
 }
 
 .music-info,
 .code-info {
-  left:0;
-  right:0;
+  margin: auto;
+  width: min(80%, 80rem);
   display: block;
   color: var(--c-white);
   
@@ -222,13 +244,26 @@ h2 > a:hover {
   font-weight: var(--fw-regular);
 }
 
-@media (min-width: 800px) {
-  h2 {
-    font-size: var(--fs-xxl);
+@media screen and (min-width: 1081px) {
+  .home {
+    background: linear-gradient(to bottom, var(--c-black), transparent 35%);
   }
+  
+  h2 {
+    color: inherit;
+  }
+  
   h2 > span {
     display: inline;
-    font-size: var(--fs-xl);
+  }
+
+  h2 > a:hover {
+    color: var(--c-teal);
+  }
+
+  .code-link,
+  .music-link {
+    color: inherit;
   }
 
   .code-link::after,
@@ -261,15 +296,15 @@ h2 > a:hover {
 
   .music-link:hover ~ .music-info, 
   .code-link:hover  ~ .code-info {
-    display: block;
     color: var(--c-white);
     transition: color 250ms;
   }
 
   .music-info,
-  .code-info {
+  .code-info {  
+    left: 0;
+    right: 0;
     position: absolute;
-    font-size: var(--fs-600);
     color: transparent;
     transition: color 50ms;
   }
@@ -288,10 +323,9 @@ h2 > a:hover {
   border-radius: .5rem;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 1081px) {
   .cta {
-    font-size: var(--fs-600); 
-    margin-top: 5rem;
+    margin-top: 8rem;
     transition: 600ms ease-in-out;
   }
 
@@ -305,10 +339,55 @@ h2 > a:hover {
 
 /* About Page */
 
-
 .about {
   background-color: var(--c-teal);
   color: var(--c-black);
+}
+
+.character-card {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  background: var(--c-teal);
+  border: var(--c-black) solid .5rem;
+  outline: var(--c-cyan) solid .5rem;
+  outline-offset: .5rem;
+  align-items: center;
+}
+
+.portrait {
+  height: 100%;
+  width: auto;
+  image-rendering: pixelated;
+  background: var(--c-cyan);
+  outline: var(--c-black) solid .5rem;
+  margin-right: 2rem;
+  
+}
+
+.character-description {
+  color: var(--c-black);
+  display: flex;
+  flex-direction: column;
+}
+
+.character-description > h3 {
+  font-size: var(--fs-600);
+}
+
+.socials {
+  font-size: var(--fs-500);
+  color: var(--c-cyan);
+  display: flex;  
+  gap: .5rem;
+}
+
+.socials a:hover {
+  color: var(--c-black);
+}
+
+.technologies {
+  font-size: var(--fs-500);
 }
 
 /* Portfolio Page */
@@ -320,34 +399,54 @@ h2 > a:hover {
 }
 
 .portfolio > h3 {
-  padding-top: 1.25rem;
+  padding-top: 2.25rem;
 }
 
 .portfolio-tabs {
-  position: absolute;
   top: 4rem;
+  gap: 1rem;
   display: flex;
   font-size: var(--fs-800);
   font-weight: var(--fw-header);
+  z-index: 5;
 }
 
 .portfolio-tabs > a {
   display: inline-block;
-  min-width: 8rem;
   text-align: center;
-  background: var(--c-gray);
 }
 
 .portfolio-tab {
   position: absolute;
-  padding-top: 8rem;
+  padding-top: 12rem;
   text-align: center;
-  order: 1;
   display: none;
 }
 
 .portfolio-tab:target {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1081px) {
+  .portfolio-tabs {
+    gap: 0;
+  }
+}
+
+#music-portfolio:target ~ .portfolio-tabs > #music-tab {
+  color: var(--c-orange) !important;
+}
+
+#code-portfolio:target ~ .portfolio-tabs > #code-tab {
+  color: var(--c-teal);
+}
+
+.album-cover {
+  width: min(20rem, 50%);
+  height: auto;
 }
 
 /* Contact Page */
