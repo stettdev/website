@@ -28,16 +28,6 @@
   --sw-min: 1081px;
 }
 
-/* @media screen and (min-width: 1081px) {
-  :root {
-    --fs-xxl: 6rem;
-    --fs-xl: 4rem;
-    --fs-800: 3rem;
-    --fs-600: 1.5rem;
-    --fs-400: 1.25rem;
-  }
-} */
-
 /* General Setup */
 
 * { box-sizing: border-box; }
@@ -91,7 +81,7 @@ header {
   position: absolute;
   top: 0;
   width: var(--w-content);
-  padding: .5rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,16 +100,6 @@ header {
 .branding span {
   display: none;
 }
-
-/* @media screen and (min-width: 800px) {
-  header {
-    padding: 2rem 0;
-  }
-
-  .branding span {
-    display: inline;
-  }
-} */
 
 /* Navigation  */
 
@@ -176,16 +156,7 @@ header {
 .to-top:hover {
   background-color: var(--c-gray);
 }
-/* 
-@media screen and (min-width: 1081px) {
-  .to-top {
-    top: 3rem;
-    right: 16rem;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    opacity: 0.75;
-  }
-} */
+
 
 /* Content */
 
@@ -239,75 +210,18 @@ h1 > span {
 .music-info,
 .code-info {
   margin: auto;
-  width: min(80%, 80rem);
+  width: 100%;
   display: block;
   color: var(--c-white);
-  
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
 }
 
-/* @media screen and (min-width: 1081px) {  
-  h1 {
-    color: inherit;
-  }
-  
-  h1 > span {
-    display: inline;
-  }
+.code-info span {
+  /* margin-left: .5ch; */
+  display: block;
+}
 
-  h1 > a:hover {
-    color: var(--c-teal);
-  }
-
-  .code-link,
-  .music-link {
-    color: inherit;
-  }
-
-  .code-link::after,
-  .music-link::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(transparent, transparent);
-    z-index: -1;  
-  }
-
-  .music-link:hover {
-    color: var(--c-orange);
-  }
-
-  .code-link::after,
-  .music-link::after {
-    opacity: 0;
-    transition: 400ms;
-    background: radial-gradient(var(--c-purple), var(--c-black));
-  }
-
-  .code-link:hover::after,
-  .music-link:hover::after {
-    opacity: 1;
-  }
-
-  .music-link:hover ~ .music-info, 
-  .code-link:hover  ~ .code-info {
-    color: var(--c-white);
-    transition: color 250ms;
-  }
-
-  .music-info,
-  .code-info {  
-    left: 0;
-    right: 0;
-    position: absolute;
-    color: transparent;
-    transition: color 50ms;
-  }
-} */
 
 .cta {
   margin-top: 1rem;
@@ -322,20 +236,6 @@ h1 > span {
   border-radius: .5rem;
 }
 
-/* @media screen and (min-width: 1081px) {
-  .cta {
-    margin-top: 8rem;
-    transition: 600ms ease-in-out;
-  }
-
-  .cta:hover {
-    color: var(--c-darkblue);
-    background: var(--c-teal); 
-    cursor: pointer;
-    box-shadow: inset 0 0 0 3rem var(--c-teal);
-  }
-} */
-
 /* About Page */
 
 .about {
@@ -344,14 +244,28 @@ h1 > span {
 }
 
 .character-card {
-  width: 80%;
-  height: 60%;
+  width: calc(100% - 3rem);
   display: flex;
   flex-direction: column;
   border: var(--c-black) solid .5rem;
   outline: var(--c-cyan) solid .5rem;
   outline-offset: .5rem;
   align-items: center;
+}
+
+.name {
+  margin-top: .5rem;
+  display: block;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-header);
+}
+
+.nickname {
+  display: block;
+  color: var(--c-cyan);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-header);
+  margin-bottom: 1rem;
 }
 
 .portrait {
@@ -374,33 +288,28 @@ h1 > span {
   color: var(--c-black);
 }
 
-.name {
-  margin-top: .5rem;
-  display: block;
-  font-size: var(--fs-600);
-  font-weight: var(--fw-header);
-}
-
-.nickname {
-  display: block;
-  color: var(--c-cyan);
-  font-size: var(--fs-400);
-  font-weight: var(--fw-header);
+.skills {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
-.technologies,
-.attributes {  
+.stats {  
   display: block;
   font-size: var(--fs-500);
   font-family: var(--ff-regular);
   font-weight: var(--fw-header);
 }
 
-.stat,
-.tech {
-  display: inline;
+.stat {
+  display: block;
   margin-right: .25em;
+}
+
+.stat-name {
+  margin-inline: .5rem;
+  color: var(--c-cyan);
 }
 
 /* Portfolio Page */
