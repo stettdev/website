@@ -28,13 +28,23 @@
   --sw-min: 1081px;
 }
 
+@media screen and (max-width: 480px) {
+  :root {
+    --fs-xxl: 4rem;
+    --fs-xl: 2.5rem;
+    --fs-800: 1.75rem;
+    --fs-600: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
 /* General Setup */
 
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
-body {
+body {  
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -81,7 +91,7 @@ header {
   position: absolute;
   top: 0;
   width: var(--w-content);
-  padding: 1.5rem 2.5rem;
+  padding: 1.5ch 2.5ch;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,7 +103,7 @@ header {
   font-family: var(--ff-regular);
   font-weight: var(--fw-branding);
   font-size: var(--fs-xl); 
-  letter-spacing: -.125em;
+  letter-spacing: -.25ch;
   color: var(--c-teal);
 }
 
@@ -113,10 +123,10 @@ header {
 .menu::after {
   content: '';
   position: absolute;
-  top: -.125rem;
-  bottom: -.125rem;
-  right: -1rem;
-  left: calc(100% + 0.75rem);
+  top: -.0625em;
+  bottom: -.0625em;
+  right: -.3625em;
+  left: calc(100% + 0.25em);
   
   background: var(--c-cyan);
 }
@@ -139,11 +149,11 @@ header {
   flex-direction: column;
 
   z-index: 5;
-  top: .75rem;
-  padding: .75rem;
-  border-radius: .5rem;
+  top: 1.5em;
+  padding: 1.5em;
+  border-radius: .5em;
 
-  font-size: var(--fs-400);
+  font-size: var(--fs-600);
  
   color: var(--c-white);
   background-color: var(--c-black);
@@ -182,7 +192,7 @@ main {
 /* Home Page */
 
 .home {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 h1 {
@@ -289,10 +299,18 @@ h1 > span {
 }
 
 .skills {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-block: 1em;
+  font-size: var(--fs-400);
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .125rem;
+}
+
+@media screen and (max-width: 480px) {
+  .portrait { width: 100%; width: min(60vw, 40em); }
+  .skills { flex-direction: column; width: min(60vw, 40em); }
 }
 
 .stats {  
@@ -304,11 +322,10 @@ h1 > span {
 
 .stat {
   display: block;
-  margin-right: .25em;
 }
 
 .stat-name {
-  margin-inline: .5rem;
+  margin-inline: .25rem;
   color: var(--c-cyan);
 }
 
