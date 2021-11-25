@@ -1,0 +1,59 @@
+@import 'variables.css';
+
+/* TRANSITIONS */
+
+.animate {
+  transition: opacity 900ms, transform 900ms;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.move-up {
+  transform: translateY(5rem);
+}
+
+.move-down {
+  transform: translateY(-5rem);
+}
+
+.move-up.appear,
+.move-down.appear {
+  transform: translateY(0);
+}
+
+/* ANIMATIONS */
+
+.type-in span {
+  position: relative;
+  opacity: 0;
+  animation: input-text 900ms forwards;
+}
+
+@keyframes input-text {
+  0% { left: -0.75ch; opacity: 0; }
+  100% { left: 0; opacity: 1; }
+}
+
+/* DELAYS */
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-600 {
+  transition-delay: 600ms;
+}
+
+.delay-900 {
+  transition-delay: 900ms;
+}
+
+.delay-1200 {
+  transition-delay: 1200ms;
+}

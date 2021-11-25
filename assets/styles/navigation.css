@@ -1,0 +1,69 @@
+@import 'variables.css';
+
+#topbar {
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 600ms;
+  position: fixed;
+  background: linear-gradient(to right, var(--c-dark), var(--c-black));
+}
+
+#topbar.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.navbar {
+  width: min(100em, 100%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  padding-block: .5em;
+}
+
+.links {
+  font-size: var(--fs-400);
+  font-weight: bold;
+  display: flex;
+  gap: 1.5em; 
+}
+
+.links > a {
+  transition: 600ms;
+  position: relative;
+}
+
+.links > a::after {
+  content: '';
+  position: absolute;
+  background-color: var(--c-color);
+  top: calc(100% + 0.125em);
+  left: 50%;
+  right: 50%;
+  bottom: -.1875em;
+  transition: 600ms;
+}
+
+.links > a.current {
+  color: var(--c-white);
+  opacity: 1;
+}
+
+.links > a.current::after,
+.links > a:hover::after {
+  left: -.25em;
+  right: -.25em;
+}
+
+.links > a.current::after {
+  background-color: var(--c-white);
+}
+
+.branding {
+  font-family: var(--ff-header);
+  font-weight: var(--fw-header);
+  font-size: var(--fs-600);
+  color: var(--c-white);
+}

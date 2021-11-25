@@ -1,0 +1,37 @@
+@import 'fonts.css';
+
+:root {
+  --ff-regular: 'Lato', sans-serif;
+  --ff-header: 'Roboto Condensed', sans-serif;
+
+  --fw-regular: 300;
+  --fw-header: 700;
+
+  --c-white: #E6F4F1;
+  --c-black: #1B1B1B;
+  --c-color: #009EAC;
+  --c-dark: #002F3D;
+  --c-yellow: #F39530;
+  --c-red: #5A1300;
+  --c-green: #008147;
+
+  --fs-xxl: 9.75rem;
+  --fs-xl:  7.25rem;
+  --fs-800: 2.25rem;
+  --fs-600: 1.75rem;
+  --fs-400: 1.25rem;
+  --fs-200: 1.00rem;
+}
+
+/* MOBILE */
+@media screen and (max-width: 719px) {
+  :root {
+    --fs-xxl: 4.75rem;
+    --fs-xl:  3.25rem;
+    --fs-800: 2.00rem;
+    --fs-600: 1.50rem;
+    --fs-400: 1.25rem;
+    --fs-200: 1.00rem;
+  }
+}
+

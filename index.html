@@ -5,120 +5,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>STETT &middot; A Curious Software Developer</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/base.css">
+  <title>Let's Work Together &middot; STETT</title>
+
+  <link rel="stylesheet" href="assets/styles/main.css">
 
   <script src="https://kit.fontawesome.com/5498e3226a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <!-- TO TOP BUTTON -->
-  <script defer type="text/javascript" src="assets/scripts/to-top.js"></script>
-  <a id="to-top" class="to-top" onclick="goToTop();"><span class="fas fa-arrow-up"></span></a>
-
-  <!-- NAVIGATION -->
-  <header>
-    <span class="branding unselectable"><span>STE</span>TT</span>
-    <nav class="menu">
-      <a class="unselectable" href="#about">about</a>
-      <a class="unselectable" href="#portfolio">portfolio</a>
-      <a class="unselectable" href="#contact">contact</a>
+  <header id="topbar">
+    <nav class="navbar">
+      <span class="branding">STETT</span>
+      <section class="links">
+        <a href="#home" id="home-link">HOME</a>
+        <a href="#about" id="about-link">ABOUT</a>
+        <a href="#portfolio" id="portfolio-link">PORTFOLIO</a>
+        <a href="#contact" id="contact-link">CONTACT</a>
+      </section>
     </nav>
   </header>
-
   <main>
-    <!-- HOME -->
-    <section id="home" class="home page">
-      
-      <h1>
-        <a href="#code-portfolio" class="code-link">code</a>
-        <div class="code-info">
-          <p>software developer<span>with over 3 years of experience</span></p>
-        </div>
-        <span class="unselectable">+</span>
-        <a href="#music-portfolio" class="music-link">music</a>
-        <div class="music-info">
-          <p>self-taught music producer</p>
-        </div>
-      </h1> 
-
-      <!-- CTA -->
-      <a href="#contact" class="cta">contact me</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about page">
-      <article class="character-card">
-
-        <!-- CHARACTER -->
-        <span class="name">Christopher Gocek</span>
-        <span class="nickname">STETT</span>
-        <img class="portrait" src="./assets/images/stett-portrait-80.png">
-        <section class="socials">
-          <a href="#" class="fab fa-github"></a>
-          <a href="#" class="fab fa-linkedin"></a>
-          <a href="#" class="fab fa-spotify"></a>
+    <section class="page" id="home">
+      <section class="page__content">
+        <p class="name animate fade-in delay-900 unselectable">Christopher Gocek</p>
+        <h1 class="animate type-in ">STETT</h1>
+        <section class="roles animate fade-in delay-600">
+          <span class="unselectable">//&nbsp;Software Engineer</span>
+          <span class="unselectable">//&nbsp;Web Developer</span>
         </section>
-        
-        <section class="skills">
-        <!-- TECHNOLOGIES -->
-          <div class="stats">
-            <div class="stat"><span class="fab fa-html5"></span><span class="stat-name">HTML:</span>5</div>
-            <div class="stat"><span class="fab fa-css3-alt"></span><span class="stat-name">CSS:</span>4</div>
-            <div class="stat"><span class="fab fa-js"></span><span class="stat-name">JavaScript:</span>4</div>
-            <div class="stat"><span class="fab fa-node-js"></span><span class="stat-name">Node.js:</span>3</div>
-          </div>
-
-          <div class="stats">
-            <div class="stat"><span class="fas fa-puzzle-piece"></span><span class="stat-name">Problem Solving:</span>5</div>
-            <div class="stat"><span class="fas fa-users"></span><span class="stat-name">Teamwork:</span>3</div>
-            <div class="stat"><span class="fas fa-comments"></span><span class="stat-name">Communitcation:</span>3</div>
-            <div class="stat"><span class="fas fa-bullhorn"></span><span class="stat-name">Leadership:</span>2</div>
-          </div>
+        <nav class="socials animate fade-in delay-900">
+          <a target="new-tab" href="https://www.linkedin.com/in/krzysztofgocek/"><span class="fab fa-linkedin"></span></a>
+          <a target="new-tab" href="https://github.com/stettdev"><span class="fab fa-github"></span></a>
+          <!-- <a target="new-tab" href=""><span class="fab fa-discord"></span></a> -->
+        </nav>
+        <!-- <span onclick="onClickCopy()">Let's Work Together</span> -->
+      </section>
+    </section>
+    <section class="page" id="about">
+      <section class="page__content">
+        <h2 class="animate move-down fade-in">ABOUT</h2>
+      </section>
+    </section>
+    <section class="page" id="portfolio">
+      <section class="page__content">
+        <h2 class="animate move-down fade-in">PORTFOLIO</h2>
+        <section class="project">
+          <h3>TRCKR</h3>
+          <ul class="tags">
+            <li>Next.js</li>
+            <li>JavaScript</li>
+            <li>SCSS</li>
+          </ul>
         </section>
-      </article>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="portfolio page">
-      <h3>I am both a developer and a producer.</h3>
-      Choose a specific branch of my experience
-
-      <!-- CODING EXPERIENCE -->
-      <div id="code-portfolio" class="portfolio-tab">
-        <h3>code</h3>
-      </div>
-      
-      <!-- MUSIC ALBUMS -->
-      <div id="music-portfolio" class="portfolio-tab">
-        <h3>music</h3>
-        <div class="album">
-          <img src="assets/images/covers/863-resurrected-cover.jpg" class="album-cover" />
-          <h4>863 Resurrected</h4>
-          <span>cinematic synthwave</span>
-        </div>
-        
-      </div>
-
-      <!-- TABS -->
-      <nav class="portfolio-tabs">
-        <a id="code-tab" href="#code-portfolio">code</a>
-        <a id="music-tab" href="#music-portfolio">music</a>
-      </nav>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact page">
-      <h3>contact</h3>
+        <section class="project">
+          <h3>Portfolio Website</h3>
+          <ul class="tags">
+            <li>HTML5</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+          </ul>
+        </section>
+      </section>
     </section>
   </main>
-  <footer>
-    Copyright 2021 &copy; STETT
+  <footer class="page" id="contact">
+    <section class="page__content">
+      <h2 class="animate move-down fade-in">CONTACT</h2>
+      <span class="animate move-up fade-in">Copyright 2021 &copy; STETT</span>
+    </section>
   </footer>
+
+  <script src="./assets/scripts/onClickCopy.js" defer></script>
+  <script src="./assets/scripts/animations.js" defer></script>
+  <script src="./assets/scripts/scrolling.js" defer></script>
+  <script src="./assets/scripts/topbar.js" defer></script>
 </body>
 </html>

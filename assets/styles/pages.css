@@ -1,0 +1,76 @@
+@import 'variables.css';
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.page__content {
+  margin-top: 5em;
+  margin-inline: auto;
+  width: min(100em, 100%);
+}
+
+.page__content h2 {
+  color: var(--c-dark);
+  line-height: var(--fs-xl);
+  font-size: var(--fs-xl);
+}
+
+#home {
+  background-image: url('../images/_portrait_3.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: var(--c-dark);
+  background-blend-mode: soft-light;
+  background-size: contain;
+  justify-content: center;
+}
+
+#home .page__content {
+  margin-top: 0;
+}
+
+#home h1 {
+  margin-left: -.125em;
+  color: var(--c-white);
+  line-height: var(--fs-xxl);
+  font-size: var(--fs-xxl);
+}
+
+#home p {
+  font-weight: bold;
+  color: var(--c-color);
+  opacity: .5;
+  font-size: var(--fs-800);
+}
+
+.roles {
+  color: var(--c-white);
+  font-size: var(--fs-400);
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: .5em;
+}
+
+.socials {
+  margin-top: 1.5rem;
+  font-size: var(--fs-600);
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+footer {
+  background: var(--c-black);
+  color: var(--c-white);
+}
+
+footer h2 {
+  color: var(--c-color) !important;
+}
