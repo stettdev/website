@@ -5,12 +5,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--c-white);
+  opacity: .5;
   margin-block: .25rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: var(--c-dark);
   border-radius: .25rem;
   border: solid transparent .125rem;
 }

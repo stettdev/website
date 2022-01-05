@@ -8,7 +8,7 @@ const pagesOptions = {
 
 const inViewOptions = {
   threshold: 1,
-  rootMargin: ''
+  rootMargin: '0px'
 };
 
 let newTarget = null;

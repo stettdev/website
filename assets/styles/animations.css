@@ -15,15 +15,35 @@
 }
 
 .move-up {
-  transform: translateY(5rem);
+  transform: translateY(2.5rem);
 }
 
 .move-down {
+  transform: translateY(-2.5rem);
+}
+
+.small-move-up {
+  transform: translateY(1rem);
+}
+
+.small-move-down {
+  transform: translateY(-1rem);
+}
+
+.big-move-up {
+  transform: translateY(5rem);
+}
+
+.big-move-down {
   transform: translateY(-5rem);
 }
 
 .move-up.appear,
-.move-down.appear {
+.move-down.appear,
+.big-move-up.appear,
+.big-move-down.appear,
+.small-move-up.appear,
+.small-move-down.appear {
   transform: translateY(0);
 }
 

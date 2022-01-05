@@ -1,0 +1,20 @@
+@import 'variables.css';
+
+.button {
+  display: block;
+  font-weight: 800;
+  padding: .5em;
+  color: var(--c-black);
+  background-color: var(--c-color);
+  text-decoration: none;
+  font-size: var(--fs-200);
+  transition: opacity 300ms;
+  opacity: .5;
+  border-radius: 1em;
+}
+
+.button:hover {
+  opacity: .875;
+  cursor: pointer;
+}
+

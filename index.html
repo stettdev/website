@@ -26,28 +26,30 @@
   <main>
     <section class="page" id="home">
       <section class="page__content">
-        <p class="name animate fade-in delay-900 unselectable">Christopher Gocek</p>
-        <h1 class="animate type-in ">STETT</h1>
-        <section class="roles animate fade-in delay-600">
+        <span class="name animate fade-in move-up delay-600 unselectable">Christopher Gocek</span>
+        <h1 class="animate type-in unselectable">STETT</h1>
+        <section class="roles animate fade-in move-down delay-600">
           <span class="unselectable">//&nbsp;Software Engineer</span>
           <span class="unselectable">//&nbsp;Web Developer</span>
         </section>
-        <nav class="socials animate fade-in delay-900">
-          <a target="new-tab" href="https://www.linkedin.com/in/krzysztofgocek/"><span class="fab fa-linkedin"></span></a>
-          <a target="new-tab" href="https://github.com/stettdev"><span class="fab fa-github"></span></a>
-          <!-- <a target="new-tab" href=""><span class="fab fa-discord"></span></a> -->
+        <nav class="socials animate fade-in move-down delay-900">
+          <a target="new-tab" class="icon" href="https://www.linkedin.com/in/krzysztofgocek/"><span class="fab fa-linkedin linkedin"></span></a>
+          <a target="new-tab" class="icon" href="https://github.com/stettdev"><span class="fab fa-github"></span></a>
+          <a target="new-tab" class="icon" onclick="onClickCopy()"><span class="fas fa-envelope"></span></a>
         </nav>
-        <!-- <span onclick="onClickCopy()">Let's Work Together</span> -->
       </section>
     </section>
     <section class="page" id="about">
       <section class="page__content">
-        <h2 class="animate move-down fade-in">ABOUT</h2>
+        <h2 class="animate big-move-down fade-in">ABOUT</h2>
+        <h3>Hi!</h3>
+        <p>My name is Chris and I code stuff!</p>
+
       </section>
     </section>
     <section class="page" id="portfolio">
       <section class="page__content">
-        <h2 class="animate move-down fade-in">PORTFOLIO</h2>
+        <h2 class="animate big-move-down fade-in">PORTFOLIO</h2>
         <section class="project">
           <h3>TRCKR</h3>
           <ul class="tags">
@@ -66,11 +68,16 @@
         </section>
       </section>
     </section>
+    <div class="toast fade-in" id="toast">Contact email address copied to clipboard</div>
   </main>
   <footer class="page" id="contact">
     <section class="page__content">
-      <h2 class="animate move-down fade-in">CONTACT</h2>
-      <span class="animate move-up fade-in">Copyright 2021 &copy; STETT</span>
+      <h2 class="animate big-move-down fade-in">CONTACT</h2>
+      <p class="contact-me">Use this e-mail address to contact me!<span class="arrow">&RightArrow;</span><a href="mailto:contact@stett.dev">contact@stett.dev</a></p>
+      <p class="contact-me">Find me on LinkedIn<span class="arrow">&RightArrow;</span><a href="https://www.linkedin.com/in/krzysztofgocek/">@krzysztofgocek</a></p>
+      <p class="contact-me">Check out my GitHub repos<span class="arrow">&RightArrow;</span><a href="https://www.github.com/stettdev/">@stettdev</a></p>
+      <!-- <p class="contact-me">Follow me on Gettr<span class="arrow">&RightArrow;</span><a href="https://www.gettr.com/user/stettdev/">@stettdev</a></p> -->
+      <span class="copyright animate move-up fade-in">Copyright 2021 &copy; STETT</span>
     </section>
   </footer>
 

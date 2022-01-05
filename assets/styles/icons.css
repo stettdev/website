@@ -1,0 +1,23 @@
+@import 'variables.css';
+
+.icon {
+  transform: translateY(0);
+  transition: 300ms;
+}
+
+.icon:hover {
+  transform: translateY(-.125em);
+  text-shadow: 0 .125em .125em var(--c-black);
+}
+
+.fa-linkedin {
+  color: var(--c-color);
+}
+
+.fa-github {
+  color: var(--c-white);
+}
+
+.fa-envelope {
+  color: var(--c-yellow);
+}

@@ -3,6 +3,10 @@
 @import 'pages.css';
 @import 'scrollbar.css';
 @import 'animations.css';
+@import 'buttons.css';
+@import 'toast.css';
+@import 'icons.css';
+
 
 html {
   font-family: var(--ff-regular);
@@ -38,6 +42,7 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
   opacity: .875;
 }
 

@@ -4,20 +4,29 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .page__content {
   margin-top: 5em;
   margin-inline: auto;
   width: min(100em, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .page__content h2 {
   color: var(--c-dark);
   line-height: var(--fs-xl);
   font-size: var(--fs-xl);
+}
+
+.page__content h3 {
+  color: var(--c-dark);
+  line-height: var(--fs-800);
+  font-size: var(--fs-800);
+  margin-block: .5em;
 }
 
 #home {
@@ -42,20 +51,26 @@
   font-size: var(--fs-xxl);
 }
 
-#home p {
+.name {
   font-weight: bold;
   color: var(--c-color);
-  opacity: .5;
   font-size: var(--fs-800);
 }
 
 .roles {
   color: var(--c-white);
-  font-size: var(--fs-400);
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: var(--fs-400);
+  align-items: flex-start;
+  justify-content: center;
   gap: .5em;
+}
+
+.roles .right {
+  display: flex;
+  align-items: center;
 }
 
 .socials {
@@ -73,4 +88,19 @@ footer {
 
 footer h2 {
   color: var(--c-color) !important;
+}
+
+footer .copyright {
+  margin-top: 2.5em;
+}
+
+footer .contact-me {
+  font-size: var(--fs-600);
+  font-weight: 800;
+}
+
+footer .arrow {
+  margin-left: .5em;
+  padding-right: 1em;
+  text-shadow: .5rem 0 0 var(--c-color), 1rem 0 0 var(--c-dark);
 }
