@@ -6,6 +6,15 @@
   transition: opacity 900ms, transform 900ms;
 }
 
+@media screen and (max-width: 800px) {
+  .animate {
+    transition: 0ms;
+    transition-delay: 0ms !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fade-in {
   opacity: 0;
 }
@@ -62,18 +71,13 @@
 
 /* DELAYS */
 
-.delay-300 {
-  transition-delay: 300ms;
-}
-
-.delay-600 {
-  transition-delay: 600ms;
-}
-
-.delay-900 {
-  transition-delay: 900ms;
-}
-
-.delay-1200 {
-  transition-delay: 1200ms;
-}
+.delay-300  { transition-delay:  300ms; }
+.delay-600  { transition-delay:  600ms; }
+.delay-900  { transition-delay:  900ms; }
+.delay-1200 { transition-delay: 1200ms; }
+.delay-1500 { transition-delay: 1500ms; }
+.delay-1800 { transition-delay: 1800ms; }
+.delay-2100 { transition-delay: 2100ms; }
+.delay-2400 { transition-delay: 2400ms; }
+.delay-2700 { transition-delay: 2700ms; }
+.delay-3000 { transition-delay: 3000ms; }

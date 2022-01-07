@@ -15,11 +15,11 @@
 }
 
 .navbar {
-  width: min(100em, 100%);
+  width: var(--page-width);
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
   padding-block: .5em;
 }
 
@@ -66,4 +66,9 @@
   font-weight: var(--fw-header);
   font-size: var(--fs-600);
   color: var(--c-white);
+  opacity: 1;
+}
+
+.branding:hover {
+  opacity: .5;
 }

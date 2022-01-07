@@ -21,17 +21,22 @@
   --fs-600: 1.75rem;
   --fs-400: 1.25rem;
   --fs-200: 1.00rem;
+  --fs-xs:  0.75rem;
+
+  --page-width: min(75em, 100vw);
 }
 
 /* MOBILE */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 800px) {
   :root {
-    --fs-xxl: 4.75rem;
-    --fs-xl:  3.25rem;
-    --fs-800: 2.00rem;
-    --fs-600: 1.50rem;
-    --fs-400: 1.25rem;
-    --fs-200: 1.00rem;
+    --fs-xxl: 5.25rem;
+    --fs-xl:  3.50rem;
+    --fs-800: 1.75rem;
+    --fs-600: 1.25rem;
+    --fs-400: 1.00rem;
+    --fs-200: 0.875rem;
+    --fs-xs:  0.5rem;
+
   }
 }
 
