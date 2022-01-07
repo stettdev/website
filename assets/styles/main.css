@@ -1,0 +1,59 @@
+@import 'variables.css';
+@import 'navigation.css';
+@import 'pages.css';
+@import 'scrollbar.css';
+@import 'animations.css';
+@import 'buttons.css';
+@import 'toast.css';
+@import 'icons.css';
+@import 'mobile.css';
+
+
+html {
+  font-family: var(--ff-regular);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  color: var(--c-black);
+  
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+
+  background-color: var(--c-white);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-header);
+  font-weight: var(--fw-header);
+}
+
+a {
+  color: var(--c-color);
+  text-decoration: none;
+  transition: opacity 300ms;
+  opacity: .5;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: .875;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}

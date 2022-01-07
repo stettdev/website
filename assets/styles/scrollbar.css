@@ -1,0 +1,20 @@
+@import 'variables.css';
+
+body::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-corner {
+  background: var(--c-black);
+  opacity: .125;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--c-dark);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--c-color);
+}

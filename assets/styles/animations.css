@@ -1,0 +1,83 @@
+@import 'variables.css';
+
+/* TRANSITIONS */
+
+.animate {
+  transition: opacity 900ms, transform 900ms;
+}
+
+@media screen and (max-width: 800px) {
+  .animate {
+    transition: 0ms;
+    transition-delay: 0ms !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.move-up {
+  transform: translateY(2.5rem);
+}
+
+.move-down {
+  transform: translateY(-2.5rem);
+}
+
+.small-move-up {
+  transform: translateY(1rem);
+}
+
+.small-move-down {
+  transform: translateY(-1rem);
+}
+
+.big-move-up {
+  transform: translateY(5rem);
+}
+
+.big-move-down {
+  transform: translateY(-5rem);
+}
+
+.move-up.appear,
+.move-down.appear,
+.big-move-up.appear,
+.big-move-down.appear,
+.small-move-up.appear,
+.small-move-down.appear {
+  transform: translateY(0);
+}
+
+/* ANIMATIONS */
+
+.type-in span {
+  position: relative;
+  opacity: 0;
+  animation: input-text 900ms forwards;
+}
+
+@keyframes input-text {
+  0% { left: -0.75ch; opacity: 0; }
+  100% { left: 0; opacity: 1; }
+}
+
+/* DELAYS */
+
+.delay-300  { transition-delay:  300ms; }
+.delay-600  { transition-delay:  600ms; }
+.delay-900  { transition-delay:  900ms; }
+.delay-1200 { transition-delay: 1200ms; }
+.delay-1500 { transition-delay: 1500ms; }
+.delay-1800 { transition-delay: 1800ms; }
+.delay-2100 { transition-delay: 2100ms; }
+.delay-2400 { transition-delay: 2400ms; }
+.delay-2700 { transition-delay: 2700ms; }
+.delay-3000 { transition-delay: 3000ms; }

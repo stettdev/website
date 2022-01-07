@@ -1,0 +1,25 @@
+@import 'variables.css';
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.button {
+  display: block;
+  font-weight: 800;
+  margin-block: 2rem;
+  padding: .5em 1em;
+  color: var(--c-white);
+  background-color: var(--c-dark);
+  text-decoration: none;
+  font-size: var(--fs-200);
+  border-radius: 1em;
+  transition-duration: 300ms;
+}
+
+.button:hover {
+  background-color: var(--c-color);
+  cursor: pointer;
+}
+

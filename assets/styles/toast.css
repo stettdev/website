@@ -1,0 +1,19 @@
+@import 'variables.css';
+
+.toast {
+  position: fixed;
+
+  bottom: 2rem;
+  left: 2rem;
+  padding: .5em;
+  z-index: 1;
+
+  font-size: var(--fs-200);
+  text-align: center;
+  font-weight: 800;
+
+  background-color: var(--c-color);
+  color: var(--c-black);
+
+  transition: opacity 1200ms;
+}
