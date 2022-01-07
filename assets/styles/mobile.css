@@ -17,16 +17,78 @@
     padding: 0;
   }
   
+  .buttons {
+    margin-top: 1.5rem;
+    flex-direction: column;
+    gap: .75em;
+  }
+
+  .buttons .button {
+    margin: 0;
+    width: 100%;
+    font-size: var(--fs-400);
+  }
+
   .page {
     min-height: 50vh;
   }
 
+  .page__content {
+    margin-top: .5em;
+  }
+
   #home {
-    background-position: left top;
+    background-position: -175% 55%;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .cards {
+    flex-direction: column;
+    overflow:visible
+  }
+
+  .card {
+    box-shadow: 0 -.25rem .5rem var(--c-black);
+  }
+
+  .card:hover {
+    transform: translate(0);
+  }
+  
+  .card:hover~.card {
+    transform: translateY(16rem);
+  }
+  
+  .card:not(:first-child) {
+    margin-left: 0;
+    margin-top: -20rem;
+  }
+
+  .card-footer {
+    flex-direction: row-reverse;
+    top: .75rem;
+    right: .75rem;
+    bottom: 100vh;
+    font-size: var(--fs-600);
+  }
+
+  .toast {
+    left: 2rem;
+    right: 2rem;
   }
 
   footer .copyright {
     bottom: 1em;
+  }
+
+  footer .contact-me {
+    margin-bottom: 2.5rem;
+  }
+
+  footer .top-line {
+    font-size: var(--fs-400);
+    display: block;
   }
 }
 

@@ -37,6 +37,7 @@
     --fs-200: 0.875rem;
     --fs-xs:  0.5rem;
 
+    --page-width: calc(100vw - 2.5rem);
   }
 }
 
