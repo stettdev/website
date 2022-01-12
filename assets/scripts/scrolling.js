@@ -19,7 +19,7 @@ if (!detectMobile()) {
   let currentlyInView = null;
   let scrolling;
 
-  window.addEventListener('scroll', function ( event ) {
+  window.addEventListener('scroll', function () {
     window.clearTimeout( scrolling );
     scrolling = setTimeout(function() {
       if (currentlyInView != newTarget) {
@@ -28,7 +28,7 @@ if (!detectMobile()) {
     }, 300);
   }, false);
 
-  const scrollIn = new IntersectionObserver((entries, scrollIn) => {
+  const scrollIn = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         if (entry.target === currentlyInView) currentlyInView = newTarget;
@@ -38,7 +38,7 @@ if (!detectMobile()) {
     });
   }, pagesOptions);
 
-  const inView = new IntersectionObserver((entries, inView) => {
+  const inView = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       currentlyInView = entry.target;
