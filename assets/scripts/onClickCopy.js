@@ -1,4 +1,4 @@
-const onClickCopy = () => {
+function onClickCopy () {
   navigator.clipboard.writeText('contact@stett.dev');
   toast();
 }
