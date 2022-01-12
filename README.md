@@ -1,8 +1,6 @@
 # **STETT.DEV** &middot; my personal website
 
-[![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/website?label=version)](#)
-[![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/website)](#)
-
+![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/website?label=version) ![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/website) ![CodeFactor](https://www.codefactor.io/repository/github/stettdev/website/badge)
 ## **What is it made of?**
 
 HTML, CSS and JavaScript. I wanted to see how much I can do with the web's baseline and I found out it's quite a lot! Starting from animations through intersection observers to simple page indicators.
