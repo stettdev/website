@@ -21,7 +21,7 @@
   color: var(--c-dark);
   line-height: var(--fs-xl);
   font-size: var(--fs-xl);
-  margin-bottom: 2rem;
+  margin-bottom: .75rem;
 }
 
 .page__content h3 {
@@ -92,6 +92,14 @@
   display: flex;
   align-items: flex-end;
   gap: .75em;
+}
+
+/* ABOUT & NOW */
+
+.sidenote {
+  font-size: var(--fs-200);
+  margin-bottom: .75rem;
+  color: var(--c-color);
 }
 
 /* PORTFOLIO */
