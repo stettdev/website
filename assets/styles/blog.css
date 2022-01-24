@@ -1,0 +1,46 @@
+@import "variables.css";
+
+.copyright {
+  position: relative !important;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-links {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.footer-links > a {
+  font-size: var(--fs-xl);
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.page__title {
+  margin: 0 !important;
+  z-index: 2;
+}
+
+.author {
+  margin-right: .25em;
+  font-size: var(--fs-600);
+  color: var(--c-color);
+}
+
+.blog-post {
+  width: 100%;
+  margin-top: 3rem;
+  background-color: white;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 0 .25rem var(--c-black);
+}
