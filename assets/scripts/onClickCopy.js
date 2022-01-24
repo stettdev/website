@@ -1,3 +1,7 @@
+document.querySelectorAll('.onClickCopy').forEach((element) => {
+  element.addEventListener('click', onClickCopy, false);
+});
+
 const onClickCopy = () => {
   navigator.clipboard.writeText('contact@stett.dev');
   toast();
@@ -6,5 +10,5 @@ const onClickCopy = () => {
 const toast = () => {
   var x = document.getElementById("toast");
   x.classList.add("appear");
-  setTimeout(function(){ x.classList.remove("appear"); }, 3000);
+  setTimeout(() => { x.classList.remove("appear"); }, 3000);
 }
