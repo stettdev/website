@@ -1,0 +1,24 @@
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
+<article class="blog-post animate move-up fade-in">
+  <h3>HELLO!</h3>
+  <p>This is an article ;)</p>
+</article>
