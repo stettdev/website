@@ -9,9 +9,9 @@ I really liked the process of tweaking every small part of the website's behavio
 
 ## **Contact me**
 
-Besides the website (which itself links to my email address) you can reach me through my Discord server linked below.
+The preferred way of contact is a communication via an email.
 
-[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](mailto:contact@stett.dev) [![Discord](https://img.shields.io/discord/883358379869896784?color=%237289da&label=join&logo=discord&logoColor=%23ffffff)](https://discord.gg/kfTHe77twD)
+[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](mailto:contact@stett.dev)
 
 ---
 
